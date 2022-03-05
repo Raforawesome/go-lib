@@ -1,6 +1,6 @@
 package lists
 
-// IntList STRING LISTS
+// IntList INTEGER LISTS
 type IntList struct {
 	Components []int
 	Length     int
