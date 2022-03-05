@@ -1,6 +1,6 @@
 package lists
 
-// Float64List STRING LISTS
+// Float64List Float64 LISTS
 type Float64List struct {
 	Components []float64
 	Length     int
