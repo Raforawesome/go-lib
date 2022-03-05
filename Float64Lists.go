@@ -1,12 +1,12 @@
 package lists
 
-// FloatList STRING LISTS
-type FloatList struct {
+// Float64List STRING LISTS
+type Float64List struct {
 	Components []float64
 	Length     int
 }
 
-func (arr *FloatList) Append(toAdd float64) {
+func (arr *Float64List) Append(toAdd float64) {
 	newLength := arr.Length + 1
 	newList := make([]float64, newLength, newLength)
 
@@ -19,16 +19,16 @@ func (arr *FloatList) Append(toAdd float64) {
 	arr.Length = newLength
 }
 
-func (arr *FloatList) Entries() []float64 {
+func (arr *Float64List) Entries() []float64 {
 	return arr.Components
 }
 
-func (arr *FloatList) SliceAt(index int) bool {
+func (arr *Float64List) SliceAt(index int) bool {
 	arr.Components = append(arr.Components[:index], arr.Components[index+1:]...)
 	return false
 }
 
-func (arr *FloatList) SliceElement(element float64) bool {
+func (arr *Float64List) SliceElement(element float64) bool {
 	indexAt := -1
 	for i, v := range arr.Components {
 		if element == v {
@@ -44,7 +44,7 @@ func (arr *FloatList) SliceElement(element float64) bool {
 	}
 }
 
-func (arr *FloatList) IndexOf(element float64) int {
+func (arr *Float64List) IndexOf(element float64) int {
 	for i, v := range arr.Components {
 		if v == element {
 			return i
@@ -54,8 +54,8 @@ func (arr *FloatList) IndexOf(element float64) int {
 }
 
 // NewFloat64List exporting constructor functions
-func NewFloat64List() FloatList {
-	list := FloatList{}
+func NewFloat64List() Float64List {
+	list := Float64List{}
 	list.Components = make([]float64, 0, 0)
 	list.Length = 0
 	return list
