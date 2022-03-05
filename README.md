@@ -1,6 +1,8 @@
 # go-lists
 A list library for Go
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/Raforawesome/go-lists.svg)](https://pkg.go.dev/github.com/Raforawesome/go-lists)
+
 
 #### Lists
 * StrList
